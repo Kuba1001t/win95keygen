@@ -73,27 +73,29 @@ if len(sys.argv)>1:
 		else:
 			oem()
 	elif sys.argv[1]=="-h":
-		print("USAGE:")
-		print("\twin95keygen [OPTION] [NUMBER]\n")
-		print("[OPTION]")
-		print("\tList of available options:\n")
-		print("\t-10d - generates a 10-digits CD Key, used to activate Windows 95, Windows NT and other Microsoft programs")
-		print("\tExample: XXX-NNNNNNN\n")
-		print("\t-11d - generates a 11-digits CD Key, used to activate Office 97")
-		print("\tExample: XXXX-NNNNNNN\n")
-		print("\t-oem - generates an OEM Key, used to activate OEM versions of Windows 95, Windows NT and other Microsoft programs")
-		print("\tExample: XXXXX-OEM-NNNNNNN-AAAAA\n")
-		print("[NUMBER]")
-		print("\tType the number of keys you want get (default is 1)")
-		print("\tFor example:")
-		print("\t\"win95keygen -10d 5\" will generate 5 10-digits keys\n")
-		print("Type windows95keygen -a to see informations about this program\n")
+		print("USAGE:",
+		"\twin95keygen [OPTION] [NUMBER]\n",
+		"[OPTION]",
+		"\tList of available options:\n",
+		"\t-10d - generates a 10-digits CD Key, used to activate Windows 95, Windows NT and other Microsoft programs",
+		"\tExample: XXX-NNNNNNN\n",
+		"\t-11d - generates a 11-digits CD Key, used to activate Office 97",
+		"\tExample: XXXX-NNNNNNN\n",
+		"\t-oem - generates an OEM Key, used to activate OEM versions of Windows 95, Windows NT and other Microsoft programs",
+		"\tExample: XXXXX-OEM-NNNNNNN-AAAAA\n",
+		"[NUMBER]",
+		"\tType the number of keys you want get (default is 1)",
+		"\tFor example:",
+		"\t\"win95keygen -10d 5\" will generate 5 10-digits keys\n",
+		"Type windows95keygen -a to see informations about this program",
+		sep='\n')
 	elif sys.argv[1]=="-a":
-		print("This program was written by intru")
-		print("Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n")
-		print("Written in Python 3.7")
-		print("Compiled with PyInstaller 3.4\n")
-		print("Check out the GitHub repo: https://github.com/intruzek3/win95keygen/")
+		print("This program was written by intru",
+		"Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n",
+		"Written in Python 3.7",
+		"Compiled with PyInstaller 3.4\n",
+		"Check out the GitHub repo: https://github.com/intruzek3/win95keygen/",
+		sep='\n')
 	else:
 		print("Unknown parameter. Type \"win95keygen -h\" to help.")
 else:
