@@ -4,15 +4,12 @@ import sys
 
 #random 7 digits
 def rng():
-		global p2
-		global code2
-		global p2sum
-		p2=random.randint(1,9999999)
-		code2=str(p2).zfill(7)
-		p2sum=0
-		for i in code2:
-			cyfra1=int(i)
-			p2sum+=cyfra1
+	p2=random.randint(1,9999999)
+	code2=str(p2).zfill(7)
+	p2sum=0
+	for i in code2:
+		cyfra1=int(i)
+		p2sum+=cyfra1
 
 #10-digits CD Key
 def a10d():
