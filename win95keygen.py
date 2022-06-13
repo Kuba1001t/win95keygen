@@ -11,9 +11,8 @@ def rng():
 		for i in code2:
 			cyfra1=int(i)
 			p2sum+=cyfra1
-		if !(p2sum%7!=0 or int(code2[6])==0 or int(code2[6])>=8:) {
+		if not (p2sum%7!=0 or int(code2[6])==0 or int(code2[6])>=8):
 			return code2
-		}
 
 #10-digits CD Key
 def a10d():
@@ -49,49 +48,50 @@ def oem():
 	print(code1+"-"+"OEM"+"-"+code2+"-"+code3)
 
 if len(sys.argv)>1:	
-	if sys.argv[1]=="-10d":
-		if len(sys.argv)>2:
-			for i in range(1, int(sys.argv[2])+1):
+	match sys.argv[1]:
+		case "-10d":
+			if len(sys.argv)>2:
+				for i in range(1, int(sys.argv[2])+1):
+					a10d()
+			else:
 				a10d()
-		else:
-			a10d()
-	elif sys.argv[1]=="-11d":
-		if len(sys.argv)>2:
-			for i in range(1, int(sys.argv[2])+1):
+		case "-11d":
+			if len(sys.argv)>2:
+				for i in range(1, int(sys.argv[2])+1):
+					a11d()
+			else:
 				a11d()
-		else:
-			a11d()
-	elif sys.argv[1]=="-oem":
-		if len(sys.argv)>2:
-			for i in range(1, int(sys.argv[2])+1):
+		case "-oem":
+			if len(sys.argv)>2:
+				for i in range(1, int(sys.argv[2])+1):
+					oem()
+			else:
 				oem()
-		else:
-			oem()
-	elif sys.argv[1]=="-h":
-		print("USAGE:",
-		"\twin95keygen [OPTION] [NUMBER]\n",
-		"[OPTION]",
-		"\tList of available options:\n",
-		"\t-10d - generates a 10-digits CD Key, used to activate Windows 95, Windows NT and other Microsoft programs",
-		"\tExample: XXX-NNNNNNN\n",
-		"\t-11d - generates a 11-digits CD Key, used to activate Office 97",
-		"\tExample: XXXX-NNNNNNN\n",
-		"\t-oem - generates an OEM Key, used to activate OEM versions of Windows 95, Windows NT and other Microsoft programs",
-		"\tExample: XXXXX-OEM-NNNNNNN-AAAAA\n",
-		"[NUMBER]",
-		"\tType the number of keys you want get (default is 1)",
-		"\tFor example:",
-		"\t\"win95keygen -10d 5\" will generate 5 10-digits keys\n",
-		"Type windows95keygen -a to see informations about this program",
-		sep='\n')
-	elif sys.argv[1]=="-a":
-		print("This program was written by intru",
-		"Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n",
-		"Written in Python 3.7",
-		"Compiled with PyInstaller 3.4\n",
-		"Check out the GitHub repo: https://github.com/intruzek3/win95keygen/",
-		sep='\n')
-	else:
-		print("Unknown parameter. Type \"win95keygen -h\" to help.")
+		case "-h":
+			print("USAGE:",
+			"\twin95keygen [OPTION] [NUMBER]\n",
+			"[OPTION]",
+			"\tList of available options:\n",
+			"\t-10d - generates a 10-digits CD Key, used to activate Windows 95, Windows NT and other Microsoft programs",
+			"\tExample: XXX-NNNNNNN\n",
+			"\t-11d - generates a 11-digits CD Key, used to activate Office 97",
+			"\tExample: XXXX-NNNNNNN\n",
+			"\t-oem - generates an OEM Key, used to activate OEM versions of Windows 95, Windows NT and other Microsoft programs",
+			"\tExample: XXXXX-OEM-NNNNNNN-AAAAA\n",
+			"[NUMBER]",
+			"\tType the number of keys you want get (default is 1)",
+			"\tFor example:",
+			"\t\"win95keygen -10d 5\" will generate 5 10-digits keys\n",
+			"Type windows95keygen -a to see informations about this program",
+			sep='\n')
+		case "-a":
+			print("This program was written by intru",
+			"Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n",
+			"Written in Python 3.7",
+			"Compiled with PyInstaller 3.4\n",
+			"Check out the GitHub repo: https://github.com/intruzek3/win95keygen/",
+			sep='\n')
+		case _:
+			print("Unknown parameter. Type \"win95keygen -h\" to help.")
 else:
 	print("Not enough parameters. Type \"win95keygen -h\" to help.") 
