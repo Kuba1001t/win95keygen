@@ -3,9 +3,12 @@ import random
 import sys
 
 #random 7 digits
-def rng():
+def rng(oem):
 	while True:
-		p2=random.randint(1,9999999)
+		if oem:
+			p2=random.randint(1,999999)
+		else:
+			p2=random.randint(1,9999999)
 		code2=str(p2).zfill(7)
 		p2sum=0
 		for i in code2:
@@ -20,7 +23,7 @@ def a10d():
 	while p1==333 or p1==444 or p1==555 or p1==666 or p1==777 or p1==888 or p1==999:
 		p1=random.randint(0,999)
 	code1=str(p1).zfill(3)
-	code2 = rng()
+	code2 = rng(False)
 	print(code1+"-"+code2)
 
 #11-Digits CD Key
@@ -30,7 +33,7 @@ def a11d():
 	rand=random.randint(1,2)
 	p1ost=(int(code1[2])+rand) % 10
 	code1+=str(p1ost)
-	code2 = rng()
+	code2 = rng(False)
 	print(code1+"-"+code2)
 
 #OEM Key
@@ -38,7 +41,7 @@ def oem():
 	p1p1=random.randint(1,366)
 	p1p2=random.choice(['95','96','97','98','99','00','01','02','03'])
 	code1=(str(p1p1)+p1p2).zfill(5)
-	code2 = rng()
+	code2 = rng(True)
 	p3=random.randint(1,99999)
 	code3=str(p3).zfill(5)
 	print(code1+"-"+"OEM"+"-"+code2+"-"+code3)
