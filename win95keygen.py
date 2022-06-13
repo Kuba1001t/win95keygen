@@ -87,7 +87,7 @@ if len(sys.argv)>1:
 		case "-a":
 			print("This program was written by intru",
 			"Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n",
-			"Written in Python 3.7",
+			"Written in Python 3.10",
 			"Compiled with PyInstaller 3.4\n",
 			"Check out the GitHub repo: https://github.com/intruzek3/win95keygen/",
 			sep='\n')
