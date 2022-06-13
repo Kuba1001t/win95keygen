@@ -1,8 +1,8 @@
-#version 1.1
+#version 1.2 by Kuba1001t (https://github.com/Kuba1001t)
 import random
 import sys
 
-#random 7 digits
+#random 7 digits - second part in all types of keys
 def rng(oem):
 	while True:
 		if oem:
@@ -26,9 +26,9 @@ def a10d():
 	code2 = rng(False)
 	print(code1+"-"+code2)
 
-#11-Digits CD Key
+#11-digits CD Key
 def a11d():
-	p1=random.randint(1,999)
+	p1=random.randint(0,999)
 	code1=str(p1).zfill(3)
 	rand=random.randint(1,2)
 	p1ost=(int(code1[2])+rand) % 10
@@ -84,10 +84,10 @@ if len(sys.argv)>1:
 			"Type windows95keygen -a to see informations about this program",
 			sep='\n')
 		case "-a":
-			print("This program was written by intru",
+			print("This program was written by intru (https://github.com/intruzek3)",
+			"Refactored by Kuba1001t (https://github.com/Kuba1001t)",
 			"Based on the article written by Daniel Gurney: https://gurney.dev/posts/mod7/\n",
 			"Written in Python 3.10",
-			"Compiled with PyInstaller 3.4\n",
 			"Check out the GitHub repo: https://github.com/intruzek3/win95keygen/",
 			sep='\n')
 		case _:
