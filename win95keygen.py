@@ -94,4 +94,4 @@ if len(sys.argv)>1:
 	else:
 		print("Unknown parameter. Type \"win95keygen -h\" to help.")
 else:
-	print("Unknown parameter. Type \"win95keygen -h\" to help.") 
+	print("Not enough parameters. Type \"win95keygen -h\" to help.") 
