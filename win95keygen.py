@@ -28,11 +28,7 @@ def a11d():
 	p1=random.randint(1,999)
 	code1=str(p1).zfill(3)
 	rand=random.randint(1,2)
-	p1ost=int(code1[2])+rand
-	if p1ost==11:
-		p1ost=1
-	elif p1ost==10:
-		p1ost=0
+	p1ost=(int(code1[2])+rand) % 10
 	code1+=str(p1ost)
 	code2 = rng()
 	print(code1+"-"+code2)
